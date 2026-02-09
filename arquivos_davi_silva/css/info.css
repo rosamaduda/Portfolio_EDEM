@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.info {
+    background-color: #37A2D0;
+    width: 80%;
+    height: 100vh;
+    margin: 10vh 0 0;
+    padding: 5%;
+    padding-bottom: 0;
+
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.info h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3.5rem;
+}
+
+.info ul {
+    list-style: none;
+}
+
+.info span {
+    text-decoration: underline;
+    text-decoration-skip-ink: all;
+}
+
+.info .title {
+    display: flex;
+    white-space: nowrap;
+}
+
+.info .title * {
+    transition: all 0.8s ease-in-out;
+}
+
+.info .title>:first-child {
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+}
+
+.info .title>:first-child:hover {
+    opacity: 1;
+}
+
+.info .title>:first-child:hover ~ div {
+    transform: translateX(67.5%);
+}
+
+#useless {
+    margin-left: 2.5%;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    background-color: aliceblue;
+    border: none;
+    outline: none;
+}
+
+.useless {
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    user-select: none;
+}
+
+.info:has(#useless:checked) .useless {
+    opacity: 1;
+}
+
+.secret::after {
+    content: "**********";
+}
+
+.secret:hover::after {
+    content: "Não vai ver não bixo.";
+}
+
+body:has(#check:checked) .info .title h1 {
+    animation: font-3 24s steps(1) infinite;
+}
+
+body:has(#check:checked) .info .title span {
+    transform: rotate(180deg) !important;
+}
+
+body:has(#check:checked) .useless>:nth-child(n) span, body:has(#check:checked) .places>h1 span, body:has(#check:checked) .title span  {
+    animation: rainbow-underline 3s linear infinite;
+}
+
+body:has(#check:checked) #char span {
+    animation: rainbow-background 4s linear infinite;
+}
+
+body:has(#check:checked) #char :nth-child(even) {
+    animation: rainbow-background 2s linear infinite;
+}
+
+body:has(#check:checked) #char :nth-child(odd) {
+    animation: rainbow-background 3s linear infinite;
+}
+
+body:has(#check:checked) #char :nth-child(3n) {
+    animation: rainbow-background 4.5s linear infinite !important;
+}
+
+body:has(#check:checked) .info>h1 {
+    animation: font-2 52s steps(1) infinite;
+}
+
+#mockup {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    background-image: url('../img/mockups/sign.png');
+    background-size: cover;
+}
+
+#char {
+    position: absolute;
+    z-index: 1;
+    transform: perspective(180px) rotateY(350deg) rotate(-20deg) skew(-20deg, -9.75deg);
+    transform-style: preserve-3d;
+    top: 28%;
+    left: -1%;
+
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 4rem;
+}
+
+body:has(#check:checked) #char {
+    animation: perspective 3s ease-in-out infinite;
+}
+
+.info:has(#useless:checked) ul {
+    list-style: circle;
+}

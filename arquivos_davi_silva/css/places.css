@@ -1,0 +1,128 @@
+.places {
+    background-image: url('../img/add/wall.jpg');
+    background-size: 230%;
+    background-position: center;
+    width: 80%;
+    height: auto;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10vh;
+    position: relative;
+    z-index: 0;
+}
+
+.places>* {
+    position: relative;
+    z-index: 2;
+}
+
+.places::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    background-color: black;
+    opacity: 15%;
+    z-index: 1;
+}
+
+body:has(#check:checked) .places::after {
+    animation: rainbow-background 4s linear infinite !important;
+}
+
+.places h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3.5rem;
+    white-space: nowrap;
+}
+
+.places>div {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    text-align: left;
+}
+
+.places>h1 {
+    text-align: center;
+}
+
+.places>:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.frame {
+    transition: all 0.7s ease-in-out;
+}
+
+div.frame {
+    position: relative;
+    width: 30%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.frame ~ div {
+    transition: all 1.1s ease-in-out;
+    width: 50%;
+}
+
+img.frame {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.essay::after {
+    content: "~ by Me";
+}
+
+body:has(#check:checked) .frame {
+    rotate: 90deg;
+}
+
+body:has(#check:checked) .frame ~ div {
+    rotate: calc(180deg * 15);
+}
+
+
+#gramado {
+    background-image: url('../img/city/gramado.jpeg');
+}
+
+#florianopolis {
+    background-image: url('../img/city/floripa.jpg');
+}
+
+#palmital {
+    background-image: url('../img/city/palmital.jpg');
+    background-position: 30% 0;
+}
+
+#campos-do-jordao {
+    background-image: url('../img/city/campos-do-jordao.jpeg');
+    background-position: 10% 50%;
+}
+
+body:has(#check:checked) #gramado {
+    transform: rotate(23deg) !important;
+}
+
+body:has(#check:checked) #florianopolis {
+   transform: rotate(-16deg) !important;
+}
+
+body:has(#check:checked) #campos-do-jordao {
+   transform: rotate(-75deg) !important;
+}
+
+body:has(#check:checked) #palmital {
+   animation: rotate 1s linear infinite;
+}

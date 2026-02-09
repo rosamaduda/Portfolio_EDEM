@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=DM+Serif+Text:ital@0;1&family=Geo:ital@0;1&family=IBM+Plex+Sans+JP&family=Jacquard+12&family=Lavishly+Yours&family=Megrim&family=Mountains+of+Christmas:wght@400;700&family=Quintessential&family=Tiny5&family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arbutus&family=Asset&family=Cardo:ital,wght@0,400;0,700;1,400&family=Chewy&family=Grape+Nuts&family=Manufacturing+Consent&family=Momo+Trust+Display&family=New+Rocker&family=Story+Script&family=Vina+Sans&display=swap');
+
+:root {
+    --background: #5A7C74;
+}
+
+body:not(:has(#check:checked)) {
+    --background-img: url('../img/landscape/lake.jpeg');
+    --background-animation: null;
+}
+
+body:has(#check:checked) {
+    --background-animation: landscapes 40s steps(1) infinite;
+    animation: rainbow-background 2s linear infinite;
+}
+
+#check:checked~.pufferfish>:nth-child(1) {
+    display: none;
+}
+
+#check:checked~.pufferfish>:nth-child(2) {
+    display: block;
+}
+
+#check:not(:checked)~.pufferfish>:nth-child(1) {
+    display: block;
+}
+
+#check:not(:checked)~.pufferfish>:nth-child(2) {
+    display: none;
+}
+
+@keyframes font {
+    0% {
+        font-family: "UnifrakturMaguntia", cursive;
+    }
+
+    5% {
+        font-family: "DM Serif Text", serif;
+    }
+
+    10% {
+        font-family: "Tiny5", sans-serif;
+    }
+
+    15% {
+        font-family: "Megrim", system-ui;
+    }
+
+    20% {
+        font-family: "Jacquard 12", system-ui;
+    }
+
+    25% {
+        font-family: "Quintessential", serif;
+    }
+
+    30% {
+        font-family: "Audiowide", sans-serif;
+    }
+
+    35% {
+        font-family: "Geo", sans-serif;
+    }
+
+    40% {
+        font-family: "Mountains of Christmas", serif;
+    }
+
+    45% {
+        font-family: "Lavishly Yours", cursive;
+    }
+
+    50% {
+        font-family: "Manufacturing Consent", system-ui;
+    }
+
+    55% {
+        font-family: "Momo Trust Display", sans-serif;
+    }
+
+    60% {
+        font-family: "Story Script", sans-serif;
+    }
+
+    65% {
+        font-family: "New Rocker", system-ui;
+    }
+
+    70% {
+        font-family: "New Rocker", system-ui;
+    }
+
+    75% {
+        font-family: "Vina Sans", sans-serif;
+    }
+
+    80% {
+        font-family: "Arbutus", serif;
+    }
+
+    85% {
+        font-family: "Chewy", system-ui;
+    }
+
+    90% {
+        font-family: "Asset", serif;
+    }
+
+    95% {
+        font-family: "Grape Nuts", cursive;
+    }
+
+    100% {
+        font-family: "Cardo", serif;
+    }
+}
+
+@keyframes font-2 {
+    0% {
+        font-family: "Cardo", serif;
+    }
+
+    5% {
+        font-family: "Chewy", system-ui;
+    }
+
+    10% {
+        font-family: "Jacquard 12", system-ui;
+    }
+
+    15% {
+        font-family: "Mountains of Christmas", serif;
+    }
+
+    20% {
+        font-family: "New Rocker", system-ui;
+    }
+
+    25% {
+        font-family: "Tiny5", sans-serif;
+    }
+
+    30% {
+        font-family: "Grape Nuts", cursive;
+    }
+
+    35% {
+        font-family: "Quintessential", serif;
+    }
+
+    40% {
+        font-family: "Vina Sans", sans-serif;
+    }
+
+    45% {
+        font-family: "UnifrakturMaguntia", cursive;
+    }
+
+    50% {
+        font-family: "Audiowide", sans-serif;
+    }
+
+    55% {
+        font-family: "DM Serif Text", serif;
+    }
+
+    60% {
+        font-family: "Arbutus", serif;
+    }
+
+    65% {
+        font-family: "Story Script", sans-serif;
+    }
+
+    70% {
+        font-family: "Geo", sans-serif;
+    }
+
+    75% {
+        font-family: "Lavishly Yours", cursive;
+    }
+
+    80% {
+        font-family: "Manufacturing Consent", system-ui;
+    }
+
+    85% {
+        font-family: "Momo Trust Display", sans-serif;
+    }
+
+    90% {
+        font-family: "Asset", serif;
+    }
+
+    95% {
+        font-family: "Megrim", system-ui;
+    }
+
+    100% {
+        font-family: "New Rocker", system-ui;
+    }
+}
+
+@keyframes font-3 {
+    0% {
+        font-family: "Lavishly Yours", cursive;
+    }
+
+    5% {
+        font-family: "Tiny5", sans-serif;
+    }
+
+    10% {
+        font-family: "Quintessential", serif;
+    }
+
+    15% {
+        font-family: "Cardo", serif;
+    }
+
+    20% {
+        font-family: "New Rocker", system-ui;
+    }
+
+    25% {
+        font-family: "DM Serif Text", serif;
+    }
+
+    30% {
+        font-family: "Manufacturing Consent", system-ui;
+    }
+
+    35% {
+        font-family: "Grape Nuts", cursive;
+    }
+
+    40% {
+        font-family: "Geo", sans-serif;
+    }
+
+    45% {
+        font-family: "Mountains of Christmas", serif;
+    }
+
+    50% {
+        font-family: "Arbutus", serif;
+    }
+
+    55% {
+        font-family: "Chewy", system-ui;
+    }
+
+    60% {
+        font-family: "Vina Sans", sans-serif;
+    }
+
+    65% {
+        font-family: "Megrim", system-ui;
+    }
+
+    70% {
+        font-family: "UnifrakturMaguntia", cursive;
+    }
+
+    75% {
+        font-family: "Momo Trust Display", sans-serif;
+    }
+
+    80% {
+        font-family: "Audiowide", sans-serif;
+    }
+
+    85% {
+        font-family: "Asset", serif;
+    }
+
+    90% {
+        font-family: "Story Script", sans-serif;
+    }
+
+    95% {
+        font-family: "Jacquard 12", system-ui;
+    }
+
+    100% {
+        font-family: "New Rocker", system-ui;
+    }
+}
+
+@keyframes font-4 {
+    0% {
+        font-family: "Jacquard 12", system-ui;
+    }
+
+    5% {
+        font-family: "New Rocker", system-ui;
+    }
+
+    10% {
+        font-family: "Mountains of Christmas", serif;
+    }
+
+    15% {
+        font-family: "Arbutus", serif;
+    }
+
+    20% {
+        font-family: "Chewy", system-ui;
+    }
+
+    25% {
+        font-family: "Grape Nuts", cursive;
+    }
+
+    30% {
+        font-family: "Cardo", serif;
+    }
+
+    35% {
+        font-family: "Story Script", sans-serif;
+    }
+
+    40% {
+        font-family: "Audiowide", sans-serif;
+    }
+
+    45% {
+        font-family: "DM Serif Text", serif;
+    }
+
+    50% {
+        font-family: "Tiny5", sans-serif;
+    }
+
+    55% {
+        font-family: "Lavishly Yours", cursive;
+    }
+
+    60% {
+        font-family: "Vina Sans", sans-serif;
+    }
+
+    65% {
+        font-family: "Manufacturing Consent", system-ui;
+    }
+
+    70% {
+        font-family: "Megrim", system-ui;
+    }
+
+    75% {
+        font-family: "Geo", sans-serif;
+    }
+
+    80% {
+        font-family: "Quintessential", serif;
+    }
+
+    85% {
+        font-family: "UnifrakturMaguntia", cursive;
+    }
+
+    90% {
+        font-family: "Momo Trust Display", sans-serif;
+    }
+
+    95% {
+        font-family: "Asset", serif;
+    }
+
+    100% {
+        font-family: "New Rocker", system-ui;
+    }
+}
+
+
+@keyframes landscapes {
+    0% {
+        background-image: url('../img/landscape/mountain.jpg');
+        background-position: 50% 80%;
+    }
+
+    25% {
+        background-image: url('../img/landscape/vulcano.jpg');
+        background-size: 110%;
+        background-position: top;
+    }
+
+    50% {
+        background-image: url('../img/landscape/fish.jpg');
+    }
+
+    75% {
+        background-image: url('../img/landscape/range.jpg');
+        background-position: center;
+    }
+
+    100% {
+        background-image: url('../img/landscape/beach.jpg');
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        color: rgb(255, 64, 64);
+    }
+
+    16% {
+        color: rgb(255, 182, 46);
+    }
+
+    33% {
+        color: rgb(255, 255, 66);
+    }
+
+    50% {
+        color: rgb(107, 216, 107);
+    }
+
+    66% {
+        color: rgb(89, 89, 226);
+    }
+
+    83% {
+        color: rgb(155, 80, 209);
+    }
+
+    100% {
+        color: rgb(255, 144, 255);
+    }
+}
+
+@keyframes rainbow-background {
+    0% {
+        background-color: rgb(255, 64, 64);
+    }
+
+    16% {
+        background-color: rgb(255, 182, 46);
+    }
+
+    33% {
+        background-color: rgb(255, 255, 66);
+    }
+
+    50% {
+        background-color: rgb(107, 216, 107);
+    }
+
+    66% {
+        background-color: rgb(89, 89, 226);
+    }
+
+    83% {
+        background-color: rgb(155, 80, 209);
+    }
+
+    100% {
+        background-color: rgb(255, 144, 255);
+    }
+}
+
+@keyframes rainbow-underline {
+    0% {
+        text-decoration-color: rgb(255, 64, 64);
+    }
+
+    16% {
+        text-decoration-color: rgb(255, 182, 46);
+    }
+
+    33% {
+        text-decoration-color: rgb(255, 255, 66);
+    }
+
+    50% {
+        text-decoration-color: rgb(107, 216, 107);
+    }
+
+    66% {
+        text-decoration-color: rgb(89, 89, 226);
+    }
+
+    83% {
+        text-decoration-color: rgb(155, 80, 209);
+    }
+
+    100% {
+        text-decoration-color: rgb(255, 144, 255);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes perspective {
+    0% {
+        transform: perspective(200px) scale(1) skew(0deg, 0deg) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    25% {
+        transform: perspective(400px) scale(1.8) skew(25deg, 15deg) rotateX(180deg) rotateY(90deg) rotateZ(45deg);
+    }
+
+    50% {
+        transform: perspective(800px) scale(0.3) skew(-30deg, -20deg) rotateX(360deg) rotateY(270deg) rotateZ(180deg);
+    }
+
+    75% {
+        transform: perspective(300px) scale(2.5) skew(40deg, -30deg) rotateX(540deg) rotateY(450deg) rotateZ(270deg);
+    }
+
+    100% {
+        transform: perspective(200px) scale(1) skew(0deg, 0deg) rotateX(720deg) rotateY(720deg) rotateZ(360deg);
+    }
+}
+
+@keyframes giragiraestrelinha {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-510vh) rotate(36000000000deg);
+    }
+}
