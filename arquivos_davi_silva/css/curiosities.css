@@ -1,0 +1,47 @@
+.curiosities {
+    width: 80%;
+    padding: 5%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-image: url('../img/landscape/bridge.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.curiosities h1, span {
+    white-space: nowrap;
+    transition: all 0.8s ease-in-out;
+}
+
+.curiosities h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 4rem;
+}
+
+.curiosities span {
+    opacity: 0;
+    user-select: none;
+}
+
+.curiosities h1:hover>span {
+    user-select: all;
+    opacity: 1;
+} 
+
+.curiosities h1 {
+    line-height: 0.5;
+}
+
+.curiosities img {
+    width: 40%;
+}
+
+body:has(#check:checked) .curiosities img {
+    animation: giragiraestrelinha 3s linear infinite alternate;
+}
+
+body:has(#check:checked) .curiosities h1 {
+    animation: rainbow-background 3s linear infinite, font-3 42s steps(1) infinite;
+}
